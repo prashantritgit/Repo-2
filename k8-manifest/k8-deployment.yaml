@@ -2,20 +2,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: tetris-deployment
+  name: velentine-deployment
 spec:
   replicas: 3 # You can adjust the number of replicas as needed
   selector:
     matchLabels:
-      app: tetris
+      app: valentine
   template:
     metadata:
       labels:
-        app: tetris
+        app: valentine
     spec:
       containers:
-        - name: tetris
-          image: adijaiswal/tetris:v1 # Replace with the actual image tag
+        - name: valentine
+          image: prashantritgit/valentine:v1 # Replace with the actual image tag
           ports:
             - containerPort: 80 # Replace with the port your Tetris game listens on
 
